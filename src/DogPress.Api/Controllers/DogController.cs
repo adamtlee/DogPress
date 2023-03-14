@@ -52,6 +52,7 @@ namespace DogPress.Backend.Controllers
                 }
             };
 
+            _logger.LogInformation($"retrieved {dogs.Count()} dogs.");
             return dogs;
         }
 
