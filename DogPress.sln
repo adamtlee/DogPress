@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{28BAEF73-5E9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogPress.Api", "src\DogPress.Api\DogPress.Api.csproj", "{DB0242ED-5B72-462F-AE7F-3D81ECF210EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogPress.Data", "src\DogPress.Data\DogPress.Data.csproj", "{0081235E-B4FF-49A3-ADA2-2799A8DEC38E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{DB0242ED-5B72-462F-AE7F-3D81ECF210EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB0242ED-5B72-462F-AE7F-3D81ECF210EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB0242ED-5B72-462F-AE7F-3D81ECF210EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0081235E-B4FF-49A3-ADA2-2799A8DEC38E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0081235E-B4FF-49A3-ADA2-2799A8DEC38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0081235E-B4FF-49A3-ADA2-2799A8DEC38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0081235E-B4FF-49A3-ADA2-2799A8DEC38E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DB0242ED-5B72-462F-AE7F-3D81ECF210EC} = {28BAEF73-5E9E-4EBB-8BA4-535020AE1E64}
+		{0081235E-B4FF-49A3-ADA2-2799A8DEC38E} = {28BAEF73-5E9E-4EBB-8BA4-535020AE1E64}
 	EndGlobalSection
 EndGlobal
