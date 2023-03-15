@@ -10,7 +10,7 @@ namespace DogPress.Data.Models
         public Breed ?Breed { get; set; }
 
         // TODO: Temp Data Remove once db is implimented. 
-        public IEnumerable<Dog> AllDogs()
+        public List<Dog> AllDogs()
         {
             var dogs = new List<Dog>()
             {
@@ -18,7 +18,7 @@ namespace DogPress.Data.Models
                 {
                     Id = 1,
                     FirstName = "Smudge",
-                    LastName = "Duan",
+                    LastName = "Doe",
                     Age = 2,
                     Breed = new Breed()
                     {
@@ -34,7 +34,7 @@ namespace DogPress.Data.Models
                 {
                     Id = 2,
                     FirstName = "Gatsby",
-                    LastName = "Lee",
+                    LastName = "Nu",
                     Age = 2,
                     Breed = new Breed()
                     {
