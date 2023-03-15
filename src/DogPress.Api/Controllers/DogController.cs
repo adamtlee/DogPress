@@ -1,5 +1,5 @@
 ﻿using System;
-using DogPress.Api.Models;
+using DogPress.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DogPress.Backend.Controllers
@@ -17,43 +17,11 @@ namespace DogPress.Backend.Controllers
         [HttpGet(Name = "GetDogs")]
         public IEnumerable<Dog> GetDogs()
         {
-            var dogs = new List<Dog>()
-            {
-                new Dog()
-                {
-                    Id = 1,
-                    FirstName = "Smudge",
-                    LastName = "Duan",
-                    Age = 2,
-                    Breed = new Breed()
-                    {
-                        Id = 1,
-                        Name = "Jindo",
-                        ActiveLevel = ActiveLevel.High,
-                        Lifespan = 14,
-                        Origin = "Korea"
-                    }
+            var dogs = new Dog();
+            var allDogs = dogs.AllDogs(); 
 
-                },
-                    new Dog()
-                {
-                    Id = 2,
-                    FirstName = "Gatsby",
-                    LastName = "Lee",
-                    Age = 2,
-                    Breed = new Breed()
-                    {
-                        Id = 1,
-                        Name = "German Shepherd",
-                        ActiveLevel = ActiveLevel.High,
-                        Lifespan = 14,
-                        Origin = "Germany"
-                    }
-                }
-            };
-
-            _logger.LogInformation($"retrieved {dogs.Count()} dogs.");
-            return dogs;
+            _logger.LogInformation($"retrieved {allDogs.Count()} dogs.");
+            return allDogs;
         }
 
     }

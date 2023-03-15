@@ -1,5 +1,5 @@
 ﻿using System;
-namespace DogPress.Api.Models
+namespace DogPress.Data.Models
 {
     public enum ActiveLevel
     {
