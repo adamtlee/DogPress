@@ -19,6 +19,18 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Moq" Version="4.18.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="v1\" />
+    <None Remove="Moq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="v1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DogPress.Data\DogPress.Data.csproj" />
+    <ProjectReference Include="..\DogPress.Services\DogPress.Services.csproj" />
+  </ItemGroup>
 </Project>

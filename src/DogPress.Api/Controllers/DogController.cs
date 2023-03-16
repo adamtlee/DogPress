@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DogPress.Backend.Controllers
 {
     [ApiController]
-    [Route("Dogs")]
+    [Route("/api/v1/DogController")]
     public class DogController : ControllerBase
     {
         private readonly ILogger<DogController> _logger;
@@ -46,14 +46,35 @@ namespace DogPress.Backend.Controllers
             }
         }
 
-        [HttpGet(Name = "GetDogs")]
+        [HttpGet]
+        [Route("dogs")]
         public List<Dog> GetDogs()
         {
-            var dogs = new Dog();
-            var allDogs = dogs.AllDogs(); 
+            var result = _dogService.GetDogs();
+            return result;
+        }
 
-            _logger.LogInformation($"retrieved {allDogs.Count()} dogs.");
-            return allDogs;
+        [HttpGet]
+        [Route("dogs/{Id}")]
+        public Dog GetDog(int Id)
+        {
+            var result = _dogService.GetDogById(Id);
+            return result;
+        }
+
+        [HttpDelete]
+        [Route("dogs/{Id}")]
+        public void DeleteDog(int Id)
+        {
+            try
+            {
+                _dogService.DeleteDogById(Id);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"An Error Occured: {ex}"); 
+            }
+            
         }
 
     }
