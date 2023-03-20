@@ -1,8 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace DogPress.Data.Models
 {
     public class Dog
     {
+        [Key, Required]
         public int Id { get; set; }
         public string ?FirstName { get; set; }
         public string ?LastName { get; set; }

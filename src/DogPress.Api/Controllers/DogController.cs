@@ -9,11 +9,9 @@ namespace DogPress.Backend.Controllers
     [Route("/api/v1/DogController")]
     public class DogController : ControllerBase
     {
-        private readonly ILogger<DogController> _logger;
         private readonly IDogService _dogService; 
-        public DogController(ILogger<DogController> logger, IDogService dogService)
+        public DogController(IDogService dogService)
         {
-            _logger = logger;
             _dogService = dogService;
         }
 
@@ -74,8 +72,6 @@ namespace DogPress.Backend.Controllers
             {
                 Console.WriteLine($"An Error Occured: {ex}"); 
             }
-            
         }
-
     }
 }

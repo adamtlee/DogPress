@@ -20,7 +20,7 @@ namespace DogPress.Tests.v1
             new Dog { Id = 3, FirstName = "Buddy", LastName = "Williams" }
         };
             mockDog.Setup(d => d.AllDogs()).Returns(expectedDogs);
-            var dogService = new DogService(mockDog.Object);
+            var dogService = new DogService();
 
             // Act
             var actualDogs = dogService.GetDogs();
